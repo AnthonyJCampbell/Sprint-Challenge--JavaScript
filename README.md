@@ -29,22 +29,30 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
-Principally, 
+Principally, the difference is in the return value. With `.map()`, you tell it to 'loop' over an array, perform some actions, and return a _new_ array with the resulting changes. In effect, it doesn't alter the original array. With `.forEach()`, you actually mutate the elements in the array and return the _original_ array. Therefore, you should only use `.forEach()` if you want to do some non-mutating action with it. Otherwise, if you want to temporarily alter the values, you ought to use `.map()`.
 
 2. What is the difference between a function and a method?
+A function is defined on the global scope, or within another function. A method, on the other hand, is native to an object.
+
+
 
 3. What is closure?
 
 4. Describe the four rules of the 'this' keyword.
+* 1. Global object/window Binding. This will have access to the global scope, most of the time.
+* 2. Implicit Binding. This happens when dot notation is used to invoke a function. Whatever is left of the dot becomes the context for `this` in the function. For example, within console.log(), `this` refers to `console`
+* 3. New binding. When calling a constructor with a 'new' keyword in front of it, `this` automatically refers to the newly created object.
+* 4. Explicit binding. This occurs when .call(), .apply(), or .bind() are used on a function.
 
 5. Why do we need super() in an extended class?
+With super(), we call the `constructor()` and thereby integrate the methods and properties of the parent class. Otherwise, the 'extended' class wouldn't have access to any of the properties of its parent. 
 
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+* [x] Fork the project into your GitHub user account
+* [x] Clone the forked project into a directory on your machine
+* [x] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
+* [x] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 
